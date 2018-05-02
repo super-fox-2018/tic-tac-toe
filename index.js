@@ -11,7 +11,7 @@ in 3x3 tictactoe, jumlah yang seimbang adalah memiliki
 */
 
 function ticTacToe (grid) {
-  let board = []
+  let board = [];
   let xo = "XO";
   let countX = 0;
   let countO = 0;
@@ -42,10 +42,10 @@ function ticTacToe (grid) {
       }
     }
 
-    board.push(row)
+    board.push(row);
   }
 
-  console.log(`X: ${countX}, O: ${countO}`);
+  //console.log(`X: ${countX}, O: ${countO}`);
   return board;
 }
 
