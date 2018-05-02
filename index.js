@@ -11,29 +11,39 @@ function tic_tac_toe(num1, num2){
     var row = num1;
     var col = num2;
     var mid = Math.floor(row * col/2)
-    var limX = mid+1;
+    var limX = mid;
     var limO = mid;
     var x = 0;
     var o = 0;
-    console.log(mid, x, o)
+    console.log(mid, limX, limO)
 
-    for(let a=0; a<=row-1; a++){
+    for(let a=0; a<row; a++){
         tic_tac_toeBoard.push([])
         
-        for(let b=0; b<=col-1; b++){
+        for(let b=0; b<col; b++){
             var randomPins = randomPin()
-            console.log(randomPins)
+            // console.log(randomPins)
             
                 if(randomPins === 'X'){
-                   if(x<=limX){
+                    //console.log(a, 'X', x)
+                   if(x<=4){
                     x += 1
                     tic_tac_toeBoard[a].push(randomPins)           
+                   }else{
+                    tic_tac_toeBoard[a].push('O')
                    }
+                
                    
-                }else if(randomPins === 'O'){
-                    if(o<=limO){
+                   
+                }
+                
+                if(randomPins === 'O'){
+                    //console.log(a, 'O', o)
+                    if(o<=5){
                      o += 1
                      tic_tac_toeBoard[a].push( randomPins)           
+                    }else{
+                        tic_tac_toeBoard[a].push('X')
                     }
                 }
             
